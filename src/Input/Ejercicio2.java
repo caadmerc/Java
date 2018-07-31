@@ -26,5 +26,7 @@ public class Ejercicio2 {
         System.out.printf("La División es: %d\n",n1/n2);
         System.out.printf("El Módulo es: %d\n",n1%n2);
         
+        input.close();
+        
     }// End Method Main
 }//End Class Ejercicio 2
