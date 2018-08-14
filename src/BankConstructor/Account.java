@@ -26,6 +26,17 @@ public class Account {
         }
     }
     
+    //Metodo que permite retirar dinero de la cuenta
+    public double withDraw(double valor){
+        if (valor>balance) {
+            System.out.println("El monto a retirar excede el balance de la cuenta");
+        }
+        else if (valor > 0.0) {                    
+             balance-=valor;
+        }
+            return balance;
+    }
+    
     //Metodo que retorna el balance de la cuenta
     public double getBalance(){
         return balance;

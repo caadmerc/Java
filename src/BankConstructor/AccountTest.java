@@ -10,10 +10,10 @@ public class AccountTest {
         Account a1=new Account("Carlos", -123.22);//Cuenta 1
         Account a2=new Account("Marcos", 590.23);//Cuenta 2
                 
-        //Muestra el contenido del objeto a1       
+        //Muestra el contenido de la cuenta 1      
         System.out.printf("La cuenta %s Tiene un total de: %.2f%n",a1.getName(),a1.getBalance());        
 
-        //Muestra el contenido del objeto a2
+        //Muestra el contenido de la cuenta 2
         System.out.printf("La cuenta %s Tiene un total de: %.2f%n",a2.getName(),a2.getBalance());
 
         // Inicializacion y creacion del Scanner
@@ -47,6 +47,12 @@ public class AccountTest {
         //Muestra el Balance de la cuenta 2
         System.out.printf("El Balance de la cuenta: %s es: %.2f%n",a2.getName(),a2.getBalance());
         
+        //Empleando el metodo withDraw
+        System.out.print("Ingrese el monto a retirar de la cuenta Carlos: ");
+        valor=input.nextDouble();
+        
+        System.out.printf("El valor de %.2f se ha retirado de la cuenta "
+                + "Y el balance actual es: %.2f%n%n",valor, a1.withDraw(valor));        
         
     }//End Method Main
 }//End Class AccountTest
