@@ -37,6 +37,12 @@ public class Account {
             return balance;
     }
     
+    //Metodo que muestra el estado de la cuenta
+    public static void displayAccount(Account account){
+        System.out.printf("\nNombre de Cuenta: %s\n"
+                + "Balance: %15.2f\n\n",account.getName(),account.getBalance());
+    }
+    
     //Metodo que retorna el balance de la cuenta
     public double getBalance(){
         return balance;

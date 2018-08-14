@@ -11,10 +11,10 @@ public class AccountTest {
         Account a2=new Account("Marcos", 590.23);//Cuenta 2
                 
         //Muestra el contenido de la cuenta 1      
-        System.out.printf("La cuenta %s Tiene un total de: %.2f%n",a1.getName(),a1.getBalance());        
+        Account.displayAccount(a1);
 
         //Muestra el contenido de la cuenta 2
-        System.out.printf("La cuenta %s Tiene un total de: %.2f%n",a2.getName(),a2.getBalance());
+        Account.displayAccount(a2);
 
         // Inicializacion y creacion del Scanner
         Scanner input=new Scanner(System.in);
@@ -24,14 +24,14 @@ public class AccountTest {
         double valor=input.nextDouble();
         
         //Ingresando el valor en la cuenta 1
-        System.out.printf("Ingresando el valor de %.2f .............%n",valor);
+        System.out.printf("Ingresando el valor de $%.2f .............%n",valor);
         a1.deposit(valor);
         
         //Muestra el Balance de la cuenta 1
-        System.out.printf("El Balance de la cuenta: %s es: %.2f%n",a1.getName(),a1.getBalance());
+        Account.displayAccount(a1);
         
         //Muestra el Balance de la cuenta 2
-        System.out.printf("El Balance de la cuenta: %s es: %.2f%n",a2.getName(),a2.getBalance());
+        Account.displayAccount(a2);
         
         //Pide el dinero a depositar por teclado en la cuenta 2
         System.out.printf("Ingrese el Dinero a depositar en la Cuenta de %s : ",a2.getName());
@@ -42,17 +42,21 @@ public class AccountTest {
         a2.deposit(valor);
         
         //Muestra el Balance de la cuenta 1
-        System.out.printf("El Balance de la cuenta: %s es: %.2f%n",a1.getName(),a1.getBalance());
+        Account.displayAccount(a1);
         
         //Muestra el Balance de la cuenta 2
-        System.out.printf("El Balance de la cuenta: %s es: %.2f%n",a2.getName(),a2.getBalance());
+        Account.displayAccount(a2);
         
         //Empleando el metodo withDraw
         System.out.print("Ingrese el monto a retirar de la cuenta Carlos: ");
         valor=input.nextDouble();
+        a1.withDraw(valor);
         
-        System.out.printf("El valor de %.2f se ha retirado de la cuenta "
-                + "Y el balance actual es: %.2f%n%n",valor, a1.withDraw(valor));        
+        //Muestra el Balance de la cuenta 1
+        Account.displayAccount(a1);
+        
+        //Muestra el Balance de la cuenta 2
+        Account.displayAccount(a2);     
         
     }//End Method Main
 }//End Class AccountTest
