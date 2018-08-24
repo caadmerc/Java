@@ -2,7 +2,7 @@
 // solo se aceptan numeros Enteros positivos
 // Si ingresa -1 la funcion retorna false
 // si es un numero entre 0 y 100 retorna true
-package switchExercise;
+package SwitchExercise;
 
 import java.util.Scanner;
 
@@ -16,7 +16,7 @@ public class ValidateInput {
     private int valid;
     private int a = 0, b = 0, c = 0, d = 0, f = 0;
 
-    public Boolean validate() {
+    public boolean validate() {
         valid = 0;// variable que me asegura que al volver a ingresar a la funcion se resetee el proceso
         while (valid == 0) {// condicion para ingresar al proceso de validacion
             Scanner in = new Scanner(System.in);
@@ -47,7 +47,7 @@ public class ValidateInput {
         switch (valor / NOTAS) {
             case 9:
             case 10:
-                this.a++;
+                a++;
                 break;
             case 8:
                 b++;
