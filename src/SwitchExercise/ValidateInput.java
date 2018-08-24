@@ -74,7 +74,7 @@ public class ValidateInput {
                     "La suma total de calificaciones es: ", total,
                     "El promedio de la clase es: ", (double) total / gradeCounter);
             System.out.printf("%s%n%s%d%n%s%d%n%s%d%n%s%d%n%s%d%n%n",
-                    "Total de estudiantes de acuerdo a su calificacion:",
+                    "Clasificacion de estudiantes de acuerdo a su calificacion:",
                     "A: ",a,
                     "B: ",b,
                     "C: ",c,
