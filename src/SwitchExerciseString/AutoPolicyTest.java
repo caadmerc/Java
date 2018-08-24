@@ -1,7 +1,5 @@
 package SwitchExerciseString;
 
-import sun.security.pkcs11.P11Util;
-
 /**
  *
  * @author Carlos Merchan Anchundia
